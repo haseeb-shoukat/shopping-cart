@@ -7,7 +7,7 @@ const Home = () => {
           Style is a way to say who you are without having to speak
         </div>
       </div>
-      <img className="home-img" src="./home-cover.jpg" />
+      <img className="home-img" src="./images/home-cover.jpg" />
     </div>
   );
 };
