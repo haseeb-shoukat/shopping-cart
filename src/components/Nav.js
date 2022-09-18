@@ -5,13 +5,13 @@ const Nav = () => {
         Knock-Offs
       </a>
       <nav>
-        <a className="nav-item active" href="/">
+        <a id="home" className="nav-item active" href="/">
           Home
         </a>
-        <a className="nav-item" href="/products">
+        <a id="products" className="nav-item" href="/products">
           Products
         </a>
-        <a className="nav-item" href="/">
+        <a id="contact" className="nav-item" href="/">
           Contact
         </a>
         <a className="nav-item" href="/">
