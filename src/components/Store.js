@@ -1,4 +1,11 @@
+import { useEffect } from "react";
+
 const Store = ({ products }) => {
+  useEffect(() => {
+    document.querySelector(".active").classList.remove("active");
+    document.querySelector("#products").classList.add("active");
+  }, []);
+
   return (
     <div className="products">
       {products.map((product, key) => {
