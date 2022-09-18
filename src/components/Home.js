@@ -1,4 +1,13 @@
+import { useEffect } from "react";
+import backgroundImage from "../images/bg.svg";
+
 const Home = () => {
+  useEffect(() => {
+    document.body.style.backgroundImage = `url(${backgroundImage})`;
+    document.querySelector(".active").classList.remove("active");
+    document.querySelector("#home").classList.add("active");
+  }, []);
+
   return (
     <div className="home">
       <div className="home-card">
