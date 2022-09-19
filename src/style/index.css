@@ -36,7 +36,7 @@ body {
 }
 
 .nav-heading {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
   color: #DEFF54;
   text-decoration: none;
@@ -47,7 +47,7 @@ nav {
   gap: 4rem;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   box-sizing: border-box;
 }
 
@@ -103,13 +103,13 @@ nav {
 }
 
 .home-quote {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 600;
   color: #FA2685;
 }
 
 .home-heading {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #FFAB3B;
   font-weight: bold;
 }
@@ -173,4 +173,51 @@ nav {
 .cart-btn:hover {
   cursor: pointer;
   background-color: #FA2685;
+}
+
+.contact-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 8rem;
+  gap: 5rem;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-basis: 100%;
+}
+
+.contact-icon {
+  transition: transform 0.15s ease-in-out;
+  font-size: 5rem;
+}
+
+.contact-icon:hover {
+  cursor: pointer;
+  color: #FA2685;
+  transform: scale(1.1);
+}
+
+.contact-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-address > p {
+  margin: 0%;  
+  padding: 0%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contact-icons > a {
+  color: black;
 }
