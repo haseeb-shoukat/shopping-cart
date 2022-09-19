@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Store from "./Store";
+import Contact from "./Contact";
+
 const products = [
   { name: "Matt Black Cap, Unbranded, Unisex", price: 19.5, img: "cap" },
   { name: "Nike Orange-White Jacket", price: 155, img: "jacket" },
@@ -32,6 +34,7 @@ const RouteSwitch = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Store products={products} />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
