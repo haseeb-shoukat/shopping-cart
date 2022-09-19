@@ -11,7 +11,7 @@ const Nav = () => {
         <a id="products" className="nav-item" href="/products">
           Products
         </a>
-        <a id="contact" className="nav-item" href="/">
+        <a id="contact" className="nav-item" href="/contact">
           Contact
         </a>
         <a className="nav-item" href="/">
