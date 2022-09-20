@@ -27,7 +27,7 @@ const Contact = () => {
           <i className="fa fa-twitter contact-icon" aria-hidden="true"></i>
         </a>
       </div>
-      <div class="contact-address">
+      <div className="contact-address">
         <p>Knock-Offs</p>
         <p>NM 87131, Albuquerque, New York</p>
       </div>
