@@ -63,6 +63,7 @@ nav {
 .nav-item:hover {
   transform: scale(1.1);
   color: #DEFF54;
+  cursor: pointer;
 }
 
 .active {
