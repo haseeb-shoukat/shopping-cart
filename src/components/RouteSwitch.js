@@ -2,6 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Store from "./Store";
 import Contact from "./Contact";
+import Nav from "./Nav";
+import Cart from "./Cart";
+import { useState } from "react";
 
 const products = [
   { name: "Matt Black Cap, Unbranded, Unisex", price: 19.5, img: "cap" },
@@ -29,13 +32,19 @@ const products = [
 ];
 
 const RouteSwitch = () => {
+  const [displayCart, setDisplayCart] = useState(false);
+
+  const showCart = () => setDisplayCart(true);
+
   return (
     <BrowserRouter>
+      <Nav showCart={showCart} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Store products={products} />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      {displayCart ? <Cart totalPrice={0} cartProducts={[]} /> : null}
     </BrowserRouter>
   );
 };
