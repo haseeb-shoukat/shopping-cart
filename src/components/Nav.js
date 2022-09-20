@@ -1,4 +1,4 @@
-const Nav = () => {
+const Nav = ({ showCart }) => {
   return (
     <div className="nav-bar">
       <a className="nav-heading" href="/">
@@ -14,11 +14,9 @@ const Nav = () => {
         <a id="contact" className="nav-item" href="/contact">
           Contact
         </a>
-        <a className="nav-item" href="/">
-          <div className="circle-shape">
-            <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-          </div>
-        </a>
+        <div className="circle-shape nav-item" onClick={showCart}>
+          <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+        </div>
       </nav>
     </div>
   );
