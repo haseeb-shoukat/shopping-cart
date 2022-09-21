@@ -14,16 +14,14 @@ const Cart = ({ hideCart, totalPrice, cartProducts }) => {
                 />
                 <div className="product-info-c">
                   <div className="product-name no-wrap">{product.name}</div>
-                  <div className="product-price">
-                    ${product.totalPrice.toFixed(2)}
-                  </div>
+                  <div className="product-price">${0}</div>
                   <div className="control-knobs">
                     <button className="control-knob">
-                      <i class="fa fa-minus" aria-hidden="true"></i>
+                      <i className="fa fa-minus" aria-hidden="true"></i>
                     </button>
                     <div>{product.quantity}</div>
                     <button className="control-knob">
-                      <i class="fa fa-plus" aria-hidden="true"></i>
+                      <i className="fa fa-plus" aria-hidden="true"></i>
                     </button>
                   </div>
                 </div>
