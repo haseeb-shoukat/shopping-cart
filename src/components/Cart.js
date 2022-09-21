@@ -4,9 +4,9 @@ const Cart = ({ hideCart, totalPrice, cartProducts }) => {
       <div className="cart">
         <div className="cart-heading">Your shopping cart</div>
         <div className="cart-products">
-          {cartProducts.map((product, key) => {
+          {cartProducts.map((product) => {
             return (
-              <div key={key} className="cart-product">
+              <div key={product.key} className="cart-product">
                 <img
                   className="product-image-c"
                   src={`./images/clothing/${product.img}.png`}
