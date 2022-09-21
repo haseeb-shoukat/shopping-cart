@@ -5,17 +5,24 @@ class Product {
     this.price = price;
     this.img = img;
     this.quantity = 0;
+    this.totalPrice = 0;
   }
 
-  increment = () => {
+  updateTotal() {
+    this.totalPrice = this.quantity * this.price;
+  }
+
+  increment() {
     if (this.quantity === 99) return;
     this.quantity += 1;
-  };
+    this.updateTotal();
+  }
 
-  decrement = () => {
+  decrement() {
     if (this.quantity === 0) return;
     this.quantity -= 1;
-  };
+    this.updateTotal();
+  }
 }
 
 export default Product;
