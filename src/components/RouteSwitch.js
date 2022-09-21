@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 import Home from "./Home";
 import Store from "./Store";
 import Contact from "./Contact";
@@ -7,28 +8,66 @@ import Cart from "./Cart";
 import { useState } from "react";
 
 const products = [
-  { name: "Matt Black Cap, Unbranded, Unisex", price: 19.5, img: "cap" },
-  { name: "Nike Orange-White Jacket", price: 155, img: "jacket" },
-  { name: "Plain White T-Shirt for Men", price: 60, img: "tshirt" },
+  {
+    name: "Matt Black Cap, Unbranded, Unisex",
+    price: 19.5,
+    img: "cap",
+    key: uuidv4(),
+  },
+  {
+    name: "Nike Orange-White Jacket",
+    price: 155,
+    img: "jacket",
+    key: uuidv4(),
+  },
+  {
+    name: "Plain White T-Shirt for Men",
+    price: 60,
+    img: "tshirt",
+    key: uuidv4(),
+  },
   {
     name: "Red Butterfly Dress + Black Belt for Women",
     price: 245,
     img: "dress",
+    key: uuidv4(),
   },
   {
     name: "Rayban 2020 Limited Edition Shades",
     price: 250,
     img: "glasses",
+    key: uuidv4(),
   },
   {
     name: "Stylish Denim Jeans for Women, Tight Fit",
     price: 30,
     img: "jeans",
+    key: uuidv4(),
   },
-  { name: "Pink Polo Shirt, Slim Waist for Women", price: 20, img: "polo" },
-  { name: "Plain Black Shirt, Fitted, Men", price: 40, img: "shirt" },
-  { name: "Stylish High Heels, Full Black", price: 250, img: "shoes" },
-  { name: "Class Release, Two Piece Black Suit", price: 400, img: "suit" },
+  {
+    name: "Pink Polo Shirt, Slim Waist for Women",
+    price: 20,
+    img: "polo",
+    key: uuidv4(),
+  },
+  {
+    name: "Plain Black Shirt, Fitted, Men",
+    price: 40,
+    img: "shirt",
+    key: uuidv4(),
+  },
+  {
+    name: "Stylish High Heels, Full Black",
+    price: 250,
+    img: "shoes",
+    key: uuidv4(),
+  },
+  {
+    name: "Class Release, Two Piece Black Suit",
+    price: 400,
+    img: "suit",
+    key: uuidv4(),
+  },
 ];
 
 const RouteSwitch = () => {

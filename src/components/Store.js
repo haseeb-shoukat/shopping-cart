@@ -8,9 +8,9 @@ const Store = ({ products }) => {
 
   return (
     <div className="products">
-      {products.map((product, key) => {
+      {products.map((product) => {
         return (
-          <div key={key} className="product-card">
+          <div key={product.key} className="product-card">
             <img
               className="card-img"
               src={`./images/clothing/${product.img}.png`}
