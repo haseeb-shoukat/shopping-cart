@@ -1,4 +1,4 @@
-const Cart = ({ hideCart, totalPrice, cartProducts }) => {
+const Cart = ({ hideCart, totalPrice, cartProducts, updateProducts }) => {
   return (
     <div className="overlay">
       <div className="cart">
@@ -16,11 +16,23 @@ const Cart = ({ hideCart, totalPrice, cartProducts }) => {
                   <div className="product-name no-wrap">{product.name}</div>
                   <div className="product-price">${0}</div>
                   <div className="control-knobs">
-                    <button className="control-knob">
+                    <button
+                      className="control-knob"
+                      onClick={() => {
+                        product.decrement();
+                        updateProducts(cartProducts);
+                      }}
+                    >
                       <i className="fa fa-minus" aria-hidden="true"></i>
                     </button>
                     <div>{product.quantity}</div>
-                    <button className="control-knob">
+                    <button
+                      className="control-knob"
+                      onClick={() => {
+                        product.increment();
+                        updateProducts(cartProducts);
+                      }}
+                    >
                       <i className="fa fa-plus" aria-hidden="true"></i>
                     </button>
                   </div>
