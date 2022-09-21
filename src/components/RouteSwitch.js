@@ -10,10 +10,19 @@ import { useState } from "react";
 const RouteSwitch = () => {
   const [displayCart, setDisplayCart] = useState(false);
   const [products, setProducts] = useState(Items);
+  const [totalPrice, setTotal] = useState(0);
 
   const showCart = () => setDisplayCart(true);
   const hideCart = () => setDisplayCart(false);
-  const updateProducts = (newProducts) => setProducts(newProducts);
+  const updateProducts = (newProducts) => {
+    setProducts(newProducts);
+    updateTotal();
+  };
+  const updateTotal = () => {
+    let total = 0;
+    products.map((product) => (total += product.totalPrice));
+    setTotal(total);
+  };
 
   return (
     <BrowserRouter>
@@ -31,7 +40,7 @@ const RouteSwitch = () => {
       {displayCart ? (
         <Cart
           hideCart={hideCart}
-          totalPrice={0}
+          totalPrice={totalPrice}
           cartProducts={[...products]}
           updateProducts={updateProducts}
         />
