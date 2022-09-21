@@ -35,6 +35,31 @@ const RouteSwitch = () => {
   const [displayCart, setDisplayCart] = useState(false);
 
   const showCart = () => setDisplayCart(true);
+  const hideCart = () => setDisplayCart(false);
+
+  const cartProducts = [
+    {
+      name: "Matt Black Cap, Unbranded, Unisex",
+      price: 19.5,
+      img: "cap",
+      quantity: 8,
+      totalPrice: 56.098,
+    },
+    {
+      name: "Red Butterfly Dress + Black Belt for Women",
+      price: 245,
+      img: "dress",
+      quantity: 4,
+      totalPrice: 800,
+    },
+    {
+      name: "Plain White T-Shirt for Men",
+      price: 60,
+      img: "tshirt",
+      quantity: 4,
+      totalPrice: 700,
+    },
+  ];
 
   return (
     <BrowserRouter>
@@ -44,7 +69,9 @@ const RouteSwitch = () => {
         <Route path="/products" element={<Store products={products} />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      {displayCart ? <Cart totalPrice={0} cartProducts={[]} /> : null}
+      {displayCart ? (
+        <Cart hideCart={hideCart} totalPrice={0} cartProducts={cartProducts} />
+      ) : null}
     </BrowserRouter>
   );
 };
