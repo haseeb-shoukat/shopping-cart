@@ -5,6 +5,8 @@ const Cart = ({ hideCart, totalPrice, cartProducts, updateProducts }) => {
         <div className="cart-heading">Your shopping cart</div>
         <div className="cart-products">
           {cartProducts.map((product) => {
+            if (product.quantity <= 0) return null;
+
             return (
               <div key={product.key} className="cart-product">
                 <img
@@ -14,7 +16,9 @@ const Cart = ({ hideCart, totalPrice, cartProducts, updateProducts }) => {
                 />
                 <div className="product-info-c">
                   <div className="product-name no-wrap">{product.name}</div>
-                  <div className="product-price">${0}</div>
+                  <div className="product-price">
+                    ${product.totalPrice.toFixed(2)}
+                  </div>
                   <div className="control-knobs">
                     <button
                       className="control-knob"
