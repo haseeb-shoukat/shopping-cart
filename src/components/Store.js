@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const Store = ({ products }) => {
+const Store = ({ products, updateProducts }) => {
   useEffect(() => {
     document.querySelector(".active").classList.remove("active");
     document.querySelector("#products").classList.add("active");
@@ -21,7 +21,15 @@ const Store = ({ products }) => {
                 <div className="product-name">{product.name}</div>
                 <div className="product-price">${product.price.toFixed(2)}</div>
               </div>
-              <button className="cart-btn">Add To Cart</button>
+              <button
+                className="cart-btn"
+                onClick={() => {
+                  product.increment();
+                  updateProducts(products);
+                }}
+              >
+                Add To Cart
+              </button>
             </div>
           </div>
         );
