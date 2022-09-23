@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact component Renders successfully 1`] = `
+<div>
+  <div
+    class="contact-card"
+  >
+    <div
+      class="contact-icons"
+    >
+      <a
+        href="https://github.com/haseeb-shoukat"
+      >
+        <i
+          aria-hidden="true"
+          class="fa fa-github contact-icon"
+        />
+      </a>
+      <a
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      >
+        <i
+          aria-hidden="true"
+          class="fa fa-facebook contact-icon"
+        />
+      </a>
+      <a
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      >
+        <i
+          aria-hidden="true"
+          class="fa fa-instagram contact-icon"
+        />
+      </a>
+      <a
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      >
+        <i
+          aria-hidden="true"
+          class="fa fa-linkedin contact-icon"
+        />
+      </a>
+      <a
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      >
+        <i
+          aria-hidden="true"
+          class="fa fa-twitter contact-icon"
+        />
+      </a>
+    </div>
+    <div
+      class="contact-address"
+    >
+      <p>
+        Knock-Offs
+      </p>
+      <p>
+        NM 87131, Albuquerque, New York
+      </p>
+    </div>
+  </div>
+</div>
+`;
