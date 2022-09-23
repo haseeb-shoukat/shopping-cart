@@ -75,6 +75,7 @@ nav {
 }
 
 .circle-shape {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,6 +83,25 @@ nav {
   background-color: white;
   height: 2.5rem;
   width: 2.5rem;
+}
+
+.bubble {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 1.4rem;
+  right: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #FFAB3B;
+  border-radius: 50%;
+}
+
+.circle-shape:hover {
+  color: white;
 }
 
 .home {
