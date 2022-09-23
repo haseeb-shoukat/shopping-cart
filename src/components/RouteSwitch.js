@@ -11,22 +11,31 @@ const RouteSwitch = () => {
   const [displayCart, setDisplayCart] = useState(false);
   const [products, setProducts] = useState(Items);
   const [totalPrice, setTotal] = useState(0);
+  const [totalQuantity, setTotalQuantity] = useState(0);
 
   const showCart = () => setDisplayCart(true);
   const hideCart = () => setDisplayCart(false);
   const updateProducts = (newProducts) => {
     setProducts(newProducts);
     updateTotal();
+    updateTotalQuantity();
   };
+
   const updateTotal = () => {
     let total = 0;
     products.map((product) => (total += product.totalPrice));
     setTotal(total);
   };
 
+  const updateTotalQuantity = () => {
+    let total = 0;
+    products.map((product) => (total += product.quantity));
+    setTotalQuantity(total);
+  };
+
   return (
     <BrowserRouter>
-      <Nav showCart={showCart} />
+      <Nav showCart={showCart} totalQuantity={totalQuantity} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
