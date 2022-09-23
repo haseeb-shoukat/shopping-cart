@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component Renders successfully 1`] = `
+<div>
+  <div
+    class="home"
+  >
+    <div
+      class="home-card"
+    >
+      <div
+        class="home-heading"
+      >
+        BEST ONLINE STORE OF THE YEAR
+      </div>
+      <div
+        class="home-quote"
+      >
+        Style is a way to say who you are without having to speak
+      </div>
+    </div>
+    <img
+      alt="cover image"
+      class="home-img"
+      src="./images/home-cover.jpg"
+    />
+  </div>
+</div>
+`;
