@@ -4,7 +4,8 @@ import backgroundImage from "../images/bg.svg";
 const Home = () => {
   useEffect(() => {
     document.body.style.backgroundImage = `url(${backgroundImage})`;
-    document.querySelector(".active").classList.remove("active");
+    const active = document.querySelector(".active");
+    if (active) active.classList.remove("active");
     document.querySelector("#home").classList.add("active");
   }, []);
 

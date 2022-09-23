@@ -2,7 +2,8 @@ import { useEffect } from "react";
 
 const Store = ({ products, updateProducts }) => {
   useEffect(() => {
-    document.querySelector(".active").classList.remove("active");
+    const active = document.querySelector(".active");
+    if (active) active.classList.remove("active");
     document.querySelector("#products").classList.add("active");
   }, []);
 
