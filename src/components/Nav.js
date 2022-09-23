@@ -1,4 +1,4 @@
-const Nav = ({ showCart }) => {
+const Nav = ({ showCart, totalQuantity }) => {
   return (
     <div className="nav-bar">
       <a className="nav-heading" href="/">
@@ -16,6 +16,9 @@ const Nav = ({ showCart }) => {
         </a>
         <div className="circle-shape nav-item" onClick={showCart}>
           <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+          {totalQuantity > 0 ? (
+            <div className="bubble">{totalQuantity}</div>
+          ) : null}
         </div>
       </nav>
     </div>
