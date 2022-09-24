@@ -14,7 +14,7 @@ const Nav = ({ showCart, totalQuantity }) => {
         <a id="contact" className="nav-item" href="/contact">
           Contact
         </a>
-        <div className="circle-shape nav-item" onClick={showCart}>
+        <div className="circle-shape nav-item" onClick={showCart} role="button">
           <i className="fa fa-shopping-cart" aria-hidden="true"></i>
           {totalQuantity > 0 ? (
             <div className="bubble">{totalQuantity}</div>
