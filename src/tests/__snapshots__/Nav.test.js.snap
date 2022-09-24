@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav component Renders successfully 1`] = `
+<div>
+  <div
+    class="nav-bar"
+  >
+    <a
+      class="nav-heading"
+      href="/"
+    >
+      Knock-Offs
+    </a>
+    <nav>
+      <a
+        class="nav-item active"
+        href="/"
+        id="home"
+      >
+        Home
+      </a>
+      <a
+        class="nav-item"
+        href="/products"
+        id="products"
+      >
+        Products
+      </a>
+      <a
+        class="nav-item"
+        href="/contact"
+        id="contact"
+      >
+        Contact
+      </a>
+      <div
+        class="circle-shape nav-item"
+        role="button"
+      >
+        <i
+          aria-hidden="true"
+          class="fa fa-shopping-cart"
+        />
+      </div>
+    </nav>
+  </div>
+</div>
+`;
